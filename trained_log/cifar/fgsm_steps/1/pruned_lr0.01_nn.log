@@ -1,0 +1,148 @@
+CUDA enabled.
+init_path : ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+noise_sd : 1.0
+init : False
+enhance_epochs : None
+parallel : False
+starting_epsilon : 1e-05
+mask_name : None
+n_pruning_steps : 1
+n_classes : 10
+warmup : False
+finetune_method : fgsm
+targeted : False
+clip_min : 0
+log_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn.log
+learning_rate : 0.01
+init_step : 1400
+ft_interval_weight : 50
+trades_beta : 6.0
+eval : False
+dataset : cifar
+train_method : nat
+norm : False
+interval_weight : 0.1
+weight_decay : 0.0001
+batch_size : 64
+early_stop : 1000
+train_epochs : 1
+model_width : 8
+eps_step : 0.00784313725490196
+transfer : False
+model_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn.pth
+resume : 0
+init_type : pure
+seed : 7
+gpu : 0
+max_pruning_ratio : 80
+test_batch_size : 100
+enhance_learning_rate : None
+last_model_path : ./trained_models_new/cifar/vgg16/last/pure_fgsm1_pruned_lr0.01_nn.pth
+results_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn_result.npy
+epsilon : 0.03137254901960784
+create_init : False
+mask_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn_mask_r80.npy
+model_name : pruned_lr0.01_nn
+clip_max : 1.0
+enhance_method : None
+prune_method : unstructured
+model_type : vgg16
+optm : sgd
+schedule_length : 10
+verbose : 200
+attack_iter : 10
+config:
+Start ticket pruning on model ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Pruning method: unstructured
+Finetune method: fgsm
+Pruned model will be saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn.pth
+Final mask will be saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn_mask_r80.npy
+Log will be saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn.log
+
+model loading from ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+      MaskedConv2d-1           [-1, 64, 32, 32]           1,728
+        MaskedBN2d-2           [-1, 64, 32, 32]             128
+              ReLU-3           [-1, 64, 32, 32]               0
+      MaskedConv2d-4           [-1, 64, 32, 32]          36,864
+        MaskedBN2d-5           [-1, 64, 32, 32]             128
+              ReLU-6           [-1, 64, 32, 32]               0
+         MaxPool2d-7           [-1, 64, 16, 16]               0
+      MaskedConv2d-8          [-1, 128, 16, 16]          73,728
+        MaskedBN2d-9          [-1, 128, 16, 16]             256
+             ReLU-10          [-1, 128, 16, 16]               0
+     MaskedConv2d-11          [-1, 128, 16, 16]         147,456
+       MaskedBN2d-12          [-1, 128, 16, 16]             256
+             ReLU-13          [-1, 128, 16, 16]               0
+        MaxPool2d-14            [-1, 128, 8, 8]               0
+     MaskedConv2d-15            [-1, 256, 8, 8]         294,912
+       MaskedBN2d-16            [-1, 256, 8, 8]             512
+             ReLU-17            [-1, 256, 8, 8]               0
+     MaskedConv2d-18            [-1, 256, 8, 8]         589,824
+       MaskedBN2d-19            [-1, 256, 8, 8]             512
+             ReLU-20            [-1, 256, 8, 8]               0
+     MaskedConv2d-21            [-1, 256, 8, 8]         589,824
+       MaskedBN2d-22            [-1, 256, 8, 8]             512
+             ReLU-23            [-1, 256, 8, 8]               0
+        MaxPool2d-24            [-1, 256, 4, 4]               0
+     MaskedConv2d-25            [-1, 512, 4, 4]       1,179,648
+       MaskedBN2d-26            [-1, 512, 4, 4]           1,024
+             ReLU-27            [-1, 512, 4, 4]               0
+     MaskedConv2d-28            [-1, 512, 4, 4]       2,359,296
+       MaskedBN2d-29            [-1, 512, 4, 4]           1,024
+             ReLU-30            [-1, 512, 4, 4]               0
+     MaskedConv2d-31            [-1, 512, 4, 4]       2,359,296
+       MaskedBN2d-32            [-1, 512, 4, 4]           1,024
+             ReLU-33            [-1, 512, 4, 4]               0
+        MaxPool2d-34            [-1, 512, 2, 2]               0
+     MaskedConv2d-35            [-1, 512, 2, 2]       2,359,296
+       MaskedBN2d-36            [-1, 512, 2, 2]           1,024
+             ReLU-37            [-1, 512, 2, 2]               0
+     MaskedConv2d-38            [-1, 512, 2, 2]       2,359,296
+       MaskedBN2d-39            [-1, 512, 2, 2]           1,024
+             ReLU-40            [-1, 512, 2, 2]               0
+     MaskedConv2d-41            [-1, 512, 2, 2]       2,359,296
+       MaskedBN2d-42            [-1, 512, 2, 2]           1,024
+             ReLU-43            [-1, 512, 2, 2]               0
+        AvgPool2d-44            [-1, 512, 1, 1]               0
+          Flatten-45                  [-1, 512]               0
+     MaskedLinear-46                  [-1, 512]         262,656
+       MaskedBN1d-47                  [-1, 512]           1,024
+             ReLU-48                  [-1, 512]               0
+     MaskedLinear-49                   [-1, 10]           5,130
+================================================================
+Total params: 14,987,722
+Trainable params: 14,987,722
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 6.58
+Params size (MB): 57.17
+Estimated Total Size (MB): 63.77
+----------------------------------------------------------------
+
+Pruning ratio = 0.00
+Epoch [0/1]
+learning rate: 0.01
+Train with FGSM
+Batch [0/782] training loss = 2.29931998, training pgd_acc = 0.10937500
+Batch [200/782] training loss = 2.10567975, training pgd_acc = 0.17187500
+Batch [400/782] training loss = 2.14002037, training pgd_acc = 0.14062500
+Batch [600/782] training loss = 1.92529464, training pgd_acc = 0.26562500
+Valid Test with FGSM
+Evaluating with pgd untargeted attack,eps=0.031373, iters=1, attack_steps=0.031373
+Clean accuracy: 37.54% (3754/10000)
+Adversarial accuracy: 25.89% (2589/10000)
+Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 37.54% (3754/10000)
+Adversarial accuracy: 24.90% (2490/10000)
+Training done, model saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch1_r80/init_pure/pruned_lr0.01_nn.pth
+Test on test set:
+Evaluating with pgd untargeted attack,eps=0.031373, iters=1, attack_steps=0.031373
+Clean accuracy: 37.54% (3754/10000)
+Adversarial accuracy: 25.89% (2589/10000)
+
+last pruned model before enhance saved to ./trained_models_new/cifar/vgg16/last/pure_fgsm1_pruned_lr0.01_nn.pth

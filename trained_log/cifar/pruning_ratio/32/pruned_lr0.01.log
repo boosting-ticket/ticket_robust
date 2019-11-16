@@ -1,0 +1,65 @@
+CUDA enabled.
+model_type : vgg16
+init_type : pure
+finetune_method : nat
+enhance_method : None
+gpu : 7
+model_name : pruned_lr0.01
+model_width : 8
+n_pruning_steps : 1
+max_pruning_ratio : 32
+train_epochs : 100
+enhance_epochs : None
+prune_method : unstructured
+dataset : cifar
+noise_sd : 1.0
+trades_beta : 6.0
+seed : 7
+warmup : False
+create_init : False
+init_step : 1400
+train_method : nat
+early_stop : 50
+norm : True
+optm : sgd
+batch_size : 64
+test_batch_size : 100
+learning_rate : 0.01
+enhance_learning_rate : None
+schedule_length : 10
+weight_decay : 0.0001
+epsilon : 0.03137254901960784
+attack_iter : 10
+eps_step : 0.00784313725490196
+targeted : False
+clip_min : 0
+clip_max : 1.0
+starting_epsilon : 1e-05
+interval_weight : 0.1
+ft_interval_weight : 50
+verbose : 200
+resume : 0
+model_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01.pth
+last_model_path : ./trained_models_new/cifar/vgg16/last/pure_pruned_lr0.01.pth
+mask_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01_mask_r32.npy
+mask_name : None
+log_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01.log
+init_path : ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+results_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01_result.npy
+n_classes : 10
+eval : False
+init : False
+transfer : False
+config:
+Start ticket pruning on model ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Pruning method: unstructured
+Finetune method: nat
+Pruned model will be saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01.pth
+Final mask will be saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01_mask_r32.npy
+Log will be saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01.log
+
+
+model loading from ./trained_models_new/cifar/vgg16/last/pure_pruned_lr0.01.pth
+last pruned model before enhance loaded from ./trained_models_new/cifar/vgg16/last/pure_pruned_lr0.01.pth
+Pruning ratio = 32.000
+mask saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r32/init_pure/pruned_lr0.01_mask_r32.npy

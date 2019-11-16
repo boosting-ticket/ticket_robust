@@ -1,0 +1,909 @@
+gpu : 3
+model_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+targeted : False
+transfer : False
+init : True
+clip_min : 0
+log_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.log
+batch_size : 64
+learning_rate : 0.1
+n_pruning_steps : 1
+max_pruning_ratio : 56
+last_model_path : ./trained_models_new/
+init_type : pure
+mask_name : pruned_lr0.01_mask_r56
+enhance_epochs : None
+eval : False
+prune_method : unstructured
+interval_weight : 0.1
+epsilon : 0.03137254901960784
+init_step : 1400
+trades_beta : 6.0
+finetune_method : nat
+ft_interval_weight : 50
+verbose : 200
+n_classes : 10
+weight_decay : 0.0001
+enhance_learning_rate : 0.1
+dataset : cifar
+warmup : True
+init_path : ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+model_name : init_enhance_m0.01_warmup0.1
+results_path : None
+early_stop : 50
+create_init : False
+enhance_method : nat
+eps_step : 0.00784313725490196
+attack_iter : 10
+starting_epsilon : 1e-05
+clip_max : 1.0
+noise_sd : 1.0
+optm : sgd
+norm : True
+test_batch_size : 100
+model_width : 8
+train_epochs : 100
+mask_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/pruned_lr0.01_mask_r56.npy
+seed : 7
+schedule_length : 10
+train_method : nat
+model_type : vgg16
+resume : 0
+CUDA enabled.
+Enhance training config:
+Enhance training method: nat
+model will be saved in: ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Init model is: ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Init mask used from: ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/pruned_lr0.01_mask_r56.npy
+Log will be saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.log
+Random seed is: 7
+
+model loading from ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Epoch [0/100]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 2.1632, training acc = 0.28
+Batch [200/704] training loss = 1.0333, training acc = 0.66
+Batch [400/704] training loss = 0.9929, training acc = 0.67
+Batch [600/704] training loss = 0.4580, training acc = 0.84
+Valid Test with nat
+Test accuracy: 79.78% (3989/5000), Test loss:0.6100
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 79.91% (7991/10000), Test loss:0.6132
+Epoch [1/100], Passed time:[51.227/51.227]
+learning rate: 0.020000000000000004
+Batch [0/704] training loss = 0.4634, training acc = 0.84
+Batch [200/704] training loss = 0.7704, training acc = 0.75
+Batch [400/704] training loss = 0.6003, training acc = 0.77
+Batch [600/704] training loss = 0.5489, training acc = 0.83
+Valid Test with nat
+Test accuracy: 79.18% (3959/5000), Test loss:0.6650
+Epoch [2/100], Passed time:[56.033/112.065]
+learning rate: 0.030000000000000006
+Batch [0/704] training loss = 0.5631, training acc = 0.81
+Batch [200/704] training loss = 0.3956, training acc = 0.89
+Batch [400/704] training loss = 0.3192, training acc = 0.89
+Batch [600/704] training loss = 0.5918, training acc = 0.83
+Valid Test with nat
+Test accuracy: 80.40% (4020/5000), Test loss:0.6094
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 79.74% (7974/10000), Test loss:0.6258
+Epoch [3/100], Passed time:[58.918/176.753]
+learning rate: 0.04000000000000001
+Batch [0/704] training loss = 0.4111, training acc = 0.83
+Batch [200/704] training loss = 0.4701, training acc = 0.84
+Batch [400/704] training loss = 0.6637, training acc = 0.81
+Batch [600/704] training loss = 0.6839, training acc = 0.80
+Valid Test with nat
+Test accuracy: 82.30% (4115/5000), Test loss:0.5431
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 83.07% (8307/10000), Test loss:0.5065
+Epoch [4/100], Passed time:[60.352/241.408]
+learning rate: 0.05
+Batch [0/704] training loss = 0.3594, training acc = 0.86
+Batch [200/704] training loss = 0.4459, training acc = 0.81
+Batch [400/704] training loss = 0.3346, training acc = 0.88
+Batch [600/704] training loss = 0.3838, training acc = 0.89
+Valid Test with nat
+Test accuracy: 82.74% (4137/5000), Test loss:0.5407
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 80.73% (8073/10000), Test loss:0.5970
+Epoch [5/100], Passed time:[61.479/307.397]
+learning rate: 0.06000000000000001
+Batch [0/704] training loss = 0.5002, training acc = 0.83
+Batch [200/704] training loss = 0.2738, training acc = 0.89
+Batch [400/704] training loss = 0.4207, training acc = 0.84
+Batch [600/704] training loss = 0.3599, training acc = 0.89
+Valid Test with nat
+Test accuracy: 76.90% (3845/5000), Test loss:0.7115
+Epoch [6/100], Passed time:[61.482/368.890]
+learning rate: 0.07
+Batch [0/704] training loss = 0.4512, training acc = 0.89
+Batch [200/704] training loss = 0.3592, training acc = 0.88
+Batch [400/704] training loss = 0.5252, training acc = 0.89
+Batch [600/704] training loss = 0.3505, training acc = 0.88
+Valid Test with nat
+Test accuracy: 84.44% (4222/5000), Test loss:0.4662
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 83.80% (8380/10000), Test loss:0.4777
+Epoch [7/100], Passed time:[62.207/435.449]
+learning rate: 0.08000000000000002
+Batch [0/704] training loss = 0.3699, training acc = 0.84
+Batch [200/704] training loss = 0.4218, training acc = 0.84
+Batch [400/704] training loss = 0.5741, training acc = 0.78
+Batch [600/704] training loss = 0.6585, training acc = 0.80
+Valid Test with nat
+Test accuracy: 83.24% (4162/5000), Test loss:0.5216
+Epoch [8/100], Passed time:[62.389/499.116]
+learning rate: 0.09000000000000001
+Batch [0/704] training loss = 0.5690, training acc = 0.80
+Batch [200/704] training loss = 0.4072, training acc = 0.92
+Batch [400/704] training loss = 0.4952, training acc = 0.88
+Batch [600/704] training loss = 0.2767, training acc = 0.91
+Valid Test with nat
+Test accuracy: 79.68% (3984/5000), Test loss:0.6416
+Epoch [9/100], Passed time:[62.572/563.148]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3690, training acc = 0.86
+Batch [200/704] training loss = 0.3764, training acc = 0.86
+Batch [400/704] training loss = 0.3879, training acc = 0.88
+Batch [600/704] training loss = 0.2961, training acc = 0.88
+Valid Test with nat
+Test accuracy: 83.12% (4156/5000), Test loss:0.5324
+Epoch [10/100], Passed time:[62.648/626.476]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3924, training acc = 0.89
+Batch [200/704] training loss = 0.3722, training acc = 0.88
+Batch [400/704] training loss = 0.2819, training acc = 0.84
+Batch [600/704] training loss = 0.2655, training acc = 0.88
+Valid Test with nat
+Test accuracy: 83.16% (4158/5000), Test loss:0.5276
+Epoch [11/100], Passed time:[62.824/691.064]
+learning rate: 0.1
+Batch [0/704] training loss = 0.4934, training acc = 0.83
+Batch [200/704] training loss = 0.4063, training acc = 0.88
+Batch [400/704] training loss = 0.1710, training acc = 0.95
+Batch [600/704] training loss = 0.1810, training acc = 0.94
+Valid Test with nat
+Test accuracy: 83.60% (4180/5000), Test loss:0.5135
+Epoch [12/100], Passed time:[62.831/753.970]
+learning rate: 0.1
+Batch [0/704] training loss = 0.4353, training acc = 0.86
+Batch [200/704] training loss = 0.4572, training acc = 0.86
+Batch [400/704] training loss = 0.2565, training acc = 0.91
+Batch [600/704] training loss = 0.3140, training acc = 0.92
+Valid Test with nat
+Test accuracy: 77.90% (3895/5000), Test loss:0.7509
+Epoch [13/100], Passed time:[62.748/815.720]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3187, training acc = 0.86
+Batch [200/704] training loss = 0.2959, training acc = 0.91
+Batch [400/704] training loss = 0.3381, training acc = 0.89
+Batch [600/704] training loss = 0.2802, training acc = 0.92
+Valid Test with nat
+Test accuracy: 84.94% (4247/5000), Test loss:0.4469
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 86.45% (8645/10000), Test loss:0.4295
+Epoch [14/100], Passed time:[63.081/883.137]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2496, training acc = 0.92
+Batch [200/704] training loss = 0.5835, training acc = 0.86
+Batch [400/704] training loss = 0.6186, training acc = 0.81
+Batch [600/704] training loss = 0.3189, training acc = 0.84
+Valid Test with nat
+Test accuracy: 86.26% (4313/5000), Test loss:0.4532
+Epoch [15/100], Passed time:[63.071/946.067]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3443, training acc = 0.91
+Batch [200/704] training loss = 0.2366, training acc = 0.91
+Batch [400/704] training loss = 0.3648, training acc = 0.91
+Batch [600/704] training loss = 0.2498, training acc = 0.94
+Valid Test with nat
+Test accuracy: 87.10% (4355/5000), Test loss:0.4267
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 86.09% (8609/10000), Test loss:0.4341
+Epoch [16/100], Passed time:[63.264/1012.230]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2741, training acc = 0.88
+Batch [200/704] training loss = 0.4534, training acc = 0.81
+Batch [400/704] training loss = 0.3838, training acc = 0.83
+Batch [600/704] training loss = 0.2914, training acc = 0.91
+Valid Test with nat
+Test accuracy: 84.18% (4209/5000), Test loss:0.5221
+Epoch [17/100], Passed time:[63.358/1077.088]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3299, training acc = 0.86
+Batch [200/704] training loss = 0.3718, training acc = 0.88
+Batch [400/704] training loss = 0.1619, training acc = 0.95
+Batch [600/704] training loss = 0.2729, training acc = 0.94
+Valid Test with nat
+Test accuracy: 85.08% (4254/5000), Test loss:0.4968
+Epoch [18/100], Passed time:[63.346/1140.236]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2177, training acc = 0.95
+Batch [200/704] training loss = 0.3776, training acc = 0.88
+Batch [400/704] training loss = 0.2282, training acc = 0.94
+Batch [600/704] training loss = 0.3679, training acc = 0.84
+Valid Test with nat
+Test accuracy: 86.78% (4339/5000), Test loss:0.4114
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 85.54% (8554/10000), Test loss:0.4398
+Epoch [19/100], Passed time:[63.519/1206.857]
+learning rate: 0.1
+Batch [0/704] training loss = 0.4424, training acc = 0.83
+Batch [200/704] training loss = 0.3778, training acc = 0.88
+Batch [400/704] training loss = 0.3031, training acc = 0.88
+Batch [600/704] training loss = 0.3597, training acc = 0.88
+Valid Test with nat
+Test accuracy: 80.08% (4004/5000), Test loss:0.6884
+Epoch [20/100], Passed time:[63.569/1271.379]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2301, training acc = 0.92
+Batch [200/704] training loss = 0.1731, training acc = 0.98
+Batch [400/704] training loss = 0.2284, training acc = 0.92
+Batch [600/704] training loss = 0.4124, training acc = 0.86
+Valid Test with nat
+Test accuracy: 86.74% (4337/5000), Test loss:0.3968
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 87.43% (8743/10000), Test loss:0.3903
+Epoch [21/100], Passed time:[63.709/1337.884]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2778, training acc = 0.92
+Batch [200/704] training loss = 0.4615, training acc = 0.86
+Batch [400/704] training loss = 0.3693, training acc = 0.84
+Batch [600/704] training loss = 0.2298, training acc = 0.94
+Valid Test with nat
+Test accuracy: 85.02% (4251/5000), Test loss:0.4973
+Epoch [22/100], Passed time:[63.688/1401.128]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1851, training acc = 0.95
+Batch [200/704] training loss = 0.3119, training acc = 0.88
+Batch [400/704] training loss = 0.3169, training acc = 0.86
+Batch [600/704] training loss = 0.3840, training acc = 0.86
+Valid Test with nat
+Test accuracy: 87.26% (4363/5000), Test loss:0.4059
+Epoch [23/100], Passed time:[63.677/1464.579]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1194, training acc = 0.95
+Batch [200/704] training loss = 0.3605, training acc = 0.89
+Batch [400/704] training loss = 0.2938, training acc = 0.89
+Batch [600/704] training loss = 0.3177, training acc = 0.91
+Valid Test with nat
+Test accuracy: 85.86% (4293/5000), Test loss:0.4537
+Epoch [24/100], Passed time:[63.697/1528.729]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3445, training acc = 0.86
+Batch [200/704] training loss = 0.3341, training acc = 0.89
+Batch [400/704] training loss = 0.5261, training acc = 0.84
+Batch [600/704] training loss = 0.3044, training acc = 0.86
+Valid Test with nat
+Test accuracy: 87.94% (4397/5000), Test loss:0.3846
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 86.59% (8659/10000), Test loss:0.4012
+Epoch [25/100], Passed time:[63.815/1595.380]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3636, training acc = 0.86
+Batch [200/704] training loss = 0.3598, training acc = 0.88
+Batch [400/704] training loss = 0.1854, training acc = 0.94
+Batch [600/704] training loss = 0.2302, training acc = 0.94
+Valid Test with nat
+Test accuracy: 86.10% (4305/5000), Test loss:0.4242
+Epoch [26/100], Passed time:[63.763/1657.848]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1065, training acc = 0.97
+Batch [200/704] training loss = 0.1885, training acc = 0.92
+Batch [400/704] training loss = 0.5676, training acc = 0.86
+Batch [600/704] training loss = 0.2738, training acc = 0.91
+Valid Test with nat
+Test accuracy: 86.74% (4337/5000), Test loss:0.4062
+Epoch [27/100], Passed time:[63.724/1720.545]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2606, training acc = 0.91
+Batch [200/704] training loss = 0.3278, training acc = 0.89
+Batch [400/704] training loss = 0.2519, training acc = 0.95
+Batch [600/704] training loss = 0.2898, training acc = 0.92
+Valid Test with nat
+Test accuracy: 84.64% (4232/5000), Test loss:0.4836
+Epoch [28/100], Passed time:[63.723/1784.240]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2817, training acc = 0.91
+Batch [200/704] training loss = 0.3518, training acc = 0.92
+Batch [400/704] training loss = 0.2019, training acc = 0.94
+Batch [600/704] training loss = 0.3877, training acc = 0.86
+Valid Test with nat
+Test accuracy: 86.74% (4337/5000), Test loss:0.3981
+Epoch [29/100], Passed time:[63.758/1848.979]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2954, training acc = 0.91
+Batch [200/704] training loss = 0.1562, training acc = 0.91
+Batch [400/704] training loss = 0.1612, training acc = 0.97
+Batch [600/704] training loss = 0.1407, training acc = 0.94
+Valid Test with nat
+Test accuracy: 85.28% (4264/5000), Test loss:0.4807
+Epoch [30/100], Passed time:[63.764/1912.914]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2761, training acc = 0.91
+Batch [200/704] training loss = 0.1576, training acc = 0.95
+Batch [400/704] training loss = 0.3267, training acc = 0.88
+Batch [600/704] training loss = 0.2140, training acc = 0.97
+Valid Test with nat
+Test accuracy: 84.14% (4207/5000), Test loss:0.5067
+Epoch [31/100], Passed time:[63.782/1977.254]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2344, training acc = 0.92
+Batch [200/704] training loss = 0.3881, training acc = 0.89
+Batch [400/704] training loss = 0.4562, training acc = 0.81
+Batch [600/704] training loss = 0.2299, training acc = 0.92
+Valid Test with nat
+Test accuracy: 88.04% (4402/5000), Test loss:0.3781
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 87.42% (8742/10000), Test loss:0.3841
+Epoch [32/100], Passed time:[63.858/2043.442]
+learning rate: 0.1
+Batch [0/704] training loss = 0.5076, training acc = 0.89
+Batch [200/704] training loss = 0.1124, training acc = 0.97
+Batch [400/704] training loss = 0.4477, training acc = 0.83
+Batch [600/704] training loss = 0.1797, training acc = 0.97
+Valid Test with nat
+Test accuracy: 86.84% (4342/5000), Test loss:0.4205
+Epoch [33/100], Passed time:[63.860/2107.386]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3370, training acc = 0.91
+Batch [200/704] training loss = 0.2591, training acc = 0.91
+Batch [400/704] training loss = 0.2515, training acc = 0.92
+Batch [600/704] training loss = 0.1718, training acc = 0.97
+Valid Test with nat
+Test accuracy: 85.02% (4251/5000), Test loss:0.5117
+Epoch [34/100], Passed time:[63.806/2169.420]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2883, training acc = 0.94
+Batch [200/704] training loss = 0.2886, training acc = 0.88
+Batch [400/704] training loss = 0.2332, training acc = 0.92
+Batch [600/704] training loss = 0.2959, training acc = 0.89
+Valid Test with nat
+Test accuracy: 86.36% (4318/5000), Test loss:0.4399
+Epoch [35/100], Passed time:[63.816/2233.554]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3560, training acc = 0.88
+Batch [200/704] training loss = 0.1347, training acc = 0.95
+Batch [400/704] training loss = 0.2349, training acc = 0.91
+Batch [600/704] training loss = 0.1673, training acc = 0.92
+Valid Test with nat
+Test accuracy: 87.76% (4388/5000), Test loss:0.3898
+Epoch [36/100], Passed time:[63.820/2297.525]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3305, training acc = 0.91
+Batch [200/704] training loss = 0.1270, training acc = 0.97
+Batch [400/704] training loss = 0.3433, training acc = 0.86
+Batch [600/704] training loss = 0.2346, training acc = 0.92
+Valid Test with nat
+Test accuracy: 85.06% (4253/5000), Test loss:0.4837
+Epoch [37/100], Passed time:[64.260/2377.606]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3380, training acc = 0.86
+Batch [200/704] training loss = 0.1613, training acc = 0.92
+Batch [400/704] training loss = 0.3932, training acc = 0.88
+Batch [600/704] training loss = 0.2458, training acc = 0.92
+Valid Test with nat
+Test accuracy: 87.24% (4362/5000), Test loss:0.4056
+Epoch [38/100], Passed time:[64.798/2462.343]
+learning rate: 0.1
+Batch [0/704] training loss = 0.4106, training acc = 0.84
+Batch [200/704] training loss = 0.2260, training acc = 0.92
+Batch [400/704] training loss = 0.2741, training acc = 0.91
+Batch [600/704] training loss = 0.2143, training acc = 0.92
+Valid Test with nat
+Test accuracy: 86.32% (4316/5000), Test loss:0.4180
+Epoch [39/100], Passed time:[65.332/2547.967]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3553, training acc = 0.89
+Batch [200/704] training loss = 0.6335, training acc = 0.80
+Batch [400/704] training loss = 0.3309, training acc = 0.88
+Batch [600/704] training loss = 0.4118, training acc = 0.92
+Valid Test with nat
+Test accuracy: 86.84% (4342/5000), Test loss:0.4241
+Epoch [40/100], Passed time:[65.877/2635.073]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3633, training acc = 0.84
+Batch [200/704] training loss = 0.3045, training acc = 0.88
+Batch [400/704] training loss = 0.3342, training acc = 0.89
+Batch [600/704] training loss = 0.2437, training acc = 0.89
+Valid Test with nat
+Test accuracy: 87.14% (4357/5000), Test loss:0.4083
+Epoch [41/100], Passed time:[66.310/2718.720]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2594, training acc = 0.88
+Batch [200/704] training loss = 0.2682, training acc = 0.92
+Batch [400/704] training loss = 0.5233, training acc = 0.84
+Batch [600/704] training loss = 0.3394, training acc = 0.89
+Valid Test with nat
+Test accuracy: 85.52% (4276/5000), Test loss:0.4661
+Epoch [42/100], Passed time:[66.721/2802.279]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2525, training acc = 0.92
+Batch [200/704] training loss = 0.2099, training acc = 0.92
+Batch [400/704] training loss = 0.5219, training acc = 0.83
+Batch [600/704] training loss = 0.4947, training acc = 0.83
+Valid Test with nat
+Test accuracy: 86.58% (4329/5000), Test loss:0.4312
+Epoch [43/100], Passed time:[67.163/2888.030]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2705, training acc = 0.89
+Batch [200/704] training loss = 0.2866, training acc = 0.89
+Batch [400/704] training loss = 0.4530, training acc = 0.84
+Batch [600/704] training loss = 0.3654, training acc = 0.91
+Valid Test with nat
+Test accuracy: 84.50% (4225/5000), Test loss:0.5337
+Epoch [44/100], Passed time:[67.532/2971.409]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1817, training acc = 0.92
+Batch [200/704] training loss = 0.2719, training acc = 0.91
+Batch [400/704] training loss = 0.3606, training acc = 0.88
+Batch [600/704] training loss = 0.3464, training acc = 0.86
+Valid Test with nat
+Test accuracy: 86.82% (4341/5000), Test loss:0.4216
+Epoch [45/100], Passed time:[67.904/3055.674]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1131, training acc = 0.97
+Batch [200/704] training loss = 0.3837, training acc = 0.88
+Batch [400/704] training loss = 0.2236, training acc = 0.91
+Batch [600/704] training loss = 0.2985, training acc = 0.84
+Valid Test with nat
+Test accuracy: 86.64% (4332/5000), Test loss:0.4101
+Epoch [46/100], Passed time:[68.285/3141.088]
+learning rate: 0.1
+Batch [0/704] training loss = 0.3147, training acc = 0.89
+Batch [200/704] training loss = 0.2445, training acc = 0.89
+Batch [400/704] training loss = 0.2253, training acc = 0.92
+Batch [600/704] training loss = 0.3584, training acc = 0.89
+Valid Test with nat
+Test accuracy: 85.98% (4299/5000), Test loss:0.4447
+Epoch [47/100], Passed time:[68.595/3223.977]
+learning rate: 0.1
+Batch [0/704] training loss = 0.2469, training acc = 0.92
+Batch [200/704] training loss = 0.2347, training acc = 0.92
+Batch [400/704] training loss = 0.3683, training acc = 0.91
+Batch [600/704] training loss = 0.2023, training acc = 0.94
+Valid Test with nat
+Test accuracy: 84.68% (4234/5000), Test loss:0.5346
+Epoch [48/100], Passed time:[68.931/3308.698]
+learning rate: 0.1
+Batch [0/704] training loss = 0.4095, training acc = 0.86
+Batch [200/704] training loss = 0.4640, training acc = 0.84
+Batch [400/704] training loss = 0.2866, training acc = 0.91
+Batch [600/704] training loss = 0.3735, training acc = 0.88
+Valid Test with nat
+Test accuracy: 89.66% (4483/5000), Test loss:0.3497
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 89.08% (8908/10000), Test loss:0.3485
+Epoch [49/100], Passed time:[69.314/3396.381]
+learning rate: 0.1
+Batch [0/704] training loss = 0.1522, training acc = 0.95
+Batch [200/704] training loss = 0.1811, training acc = 0.91
+Batch [400/704] training loss = 0.2510, training acc = 0.88
+Batch [600/704] training loss = 0.2184, training acc = 0.94
+Valid Test with nat
+Test accuracy: 87.24% (4362/5000), Test loss:0.4003
+Epoch [50/100], Passed time:[69.579/3478.928]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.2671, training acc = 0.92
+Batch [200/704] training loss = 0.1110, training acc = 0.97
+Batch [400/704] training loss = 0.0675, training acc = 0.98
+Batch [600/704] training loss = 0.0517, training acc = 0.98
+Valid Test with nat
+Test accuracy: 91.40% (4570/5000), Test loss:0.2678
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 91.96% (9196/10000), Test loss:0.2630
+Epoch [51/100], Passed time:[69.893/3564.561]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.1201, training acc = 0.97
+Batch [200/704] training loss = 0.0867, training acc = 0.95
+Batch [400/704] training loss = 0.2385, training acc = 0.94
+Batch [600/704] training loss = 0.0952, training acc = 0.95
+Valid Test with nat
+Test accuracy: 91.96% (4598/5000), Test loss:0.2600
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 91.97% (9197/10000), Test loss:0.2612
+Epoch [52/100], Passed time:[70.243/3652.619]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0466, training acc = 0.98
+Batch [200/704] training loss = 0.1282, training acc = 0.97
+Batch [400/704] training loss = 0.0588, training acc = 0.95
+Batch [600/704] training loss = 0.0640, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.40% (4620/5000), Test loss:0.2555
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 92.25% (9225/10000), Test loss:0.2589
+Epoch [53/100], Passed time:[70.537/3738.483]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.1134, training acc = 0.95
+Batch [200/704] training loss = 0.1301, training acc = 0.95
+Batch [400/704] training loss = 0.1006, training acc = 0.97
+Batch [600/704] training loss = 0.0452, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.28% (4614/5000), Test loss:0.2672
+Epoch [54/100], Passed time:[70.763/3821.178]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0612, training acc = 0.97
+Batch [200/704] training loss = 0.1446, training acc = 0.94
+Batch [400/704] training loss = 0.1260, training acc = 0.95
+Batch [600/704] training loss = 0.0330, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.22% (4611/5000), Test loss:0.2695
+Epoch [55/100], Passed time:[70.962/3902.904]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0505, training acc = 0.98
+Batch [200/704] training loss = 0.0786, training acc = 0.98
+Batch [400/704] training loss = 0.0797, training acc = 0.97
+Batch [600/704] training loss = 0.0405, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.42% (4621/5000), Test loss:0.2837
+Epoch [56/100], Passed time:[71.164/3985.191]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0284, training acc = 0.98
+Batch [200/704] training loss = 0.0709, training acc = 0.97
+Batch [400/704] training loss = 0.0554, training acc = 0.95
+Batch [600/704] training loss = 0.0580, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.14% (4607/5000), Test loss:0.2699
+Epoch [57/100], Passed time:[71.417/4070.792]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.1338, training acc = 0.95
+Batch [200/704] training loss = 0.0775, training acc = 0.98
+Batch [400/704] training loss = 0.0158, training acc = 1.00
+Batch [600/704] training loss = 0.0449, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.12% (4606/5000), Test loss:0.2750
+Epoch [58/100], Passed time:[71.656/4156.058]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0247, training acc = 1.00
+Batch [200/704] training loss = 0.0161, training acc = 1.00
+Batch [400/704] training loss = 0.0791, training acc = 0.97
+Batch [600/704] training loss = 0.0655, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.28% (4614/5000), Test loss:0.2803
+Epoch [59/100], Passed time:[71.847/4238.962]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0560, training acc = 0.98
+Batch [200/704] training loss = 0.0902, training acc = 0.97
+Batch [400/704] training loss = 0.0099, training acc = 1.00
+Batch [600/704] training loss = 0.0350, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.52% (4626/5000), Test loss:0.2669
+Epoch [60/100], Passed time:[72.073/4324.394]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0625, training acc = 0.97
+Batch [200/704] training loss = 0.0305, training acc = 1.00
+Batch [400/704] training loss = 0.0471, training acc = 0.98
+Batch [600/704] training loss = 0.1839, training acc = 0.92
+Valid Test with nat
+Test accuracy: 92.26% (4613/5000), Test loss:0.2769
+Epoch [61/100], Passed time:[72.274/4408.735]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0297, training acc = 0.98
+Batch [200/704] training loss = 0.0367, training acc = 0.98
+Batch [400/704] training loss = 0.0780, training acc = 0.97
+Batch [600/704] training loss = 0.0960, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.54% (4627/5000), Test loss:0.2802
+Epoch [62/100], Passed time:[72.487/4494.164]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0048, training acc = 1.00
+Batch [200/704] training loss = 0.1151, training acc = 0.97
+Batch [400/704] training loss = 0.0544, training acc = 0.98
+Batch [600/704] training loss = 0.0790, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.30% (4615/5000), Test loss:0.2844
+Epoch [63/100], Passed time:[72.695/4579.755]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0249, training acc = 1.00
+Batch [200/704] training loss = 0.0031, training acc = 1.00
+Batch [400/704] training loss = 0.0148, training acc = 1.00
+Batch [600/704] training loss = 0.0605, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.72% (4636/5000), Test loss:0.2820
+Epoch [64/100], Passed time:[72.889/4664.908]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0132, training acc = 1.00
+Batch [200/704] training loss = 0.0184, training acc = 1.00
+Batch [400/704] training loss = 0.0073, training acc = 1.00
+Batch [600/704] training loss = 0.0326, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.68% (4634/5000), Test loss:0.2911
+Epoch [65/100], Passed time:[73.085/4750.554]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0125, training acc = 1.00
+Batch [200/704] training loss = 0.0733, training acc = 0.97
+Batch [400/704] training loss = 0.0159, training acc = 0.98
+Batch [600/704] training loss = 0.0399, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.52% (4626/5000), Test loss:0.2877
+Epoch [66/100], Passed time:[73.265/4835.464]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0351, training acc = 0.98
+Batch [200/704] training loss = 0.0617, training acc = 0.98
+Batch [400/704] training loss = 0.1422, training acc = 0.94
+Batch [600/704] training loss = 0.0283, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.70% (4635/5000), Test loss:0.2864
+Epoch [67/100], Passed time:[73.427/4919.608]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0764, training acc = 0.98
+Batch [200/704] training loss = 0.0541, training acc = 0.97
+Batch [400/704] training loss = 0.1926, training acc = 0.95
+Batch [600/704] training loss = 0.0303, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.70% (4635/5000), Test loss:0.2879
+Epoch [68/100], Passed time:[73.563/5002.250]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0338, training acc = 0.98
+Batch [200/704] training loss = 0.0204, training acc = 1.00
+Batch [400/704] training loss = 0.0708, training acc = 0.95
+Batch [600/704] training loss = 0.0461, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.68% (4634/5000), Test loss:0.2851
+Epoch [69/100], Passed time:[73.763/5089.662]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0256, training acc = 1.00
+Batch [200/704] training loss = 0.0244, training acc = 0.98
+Batch [400/704] training loss = 0.0266, training acc = 0.98
+Batch [600/704] training loss = 0.0600, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.08% (4604/5000), Test loss:0.2990
+Epoch [70/100], Passed time:[73.924/5174.703]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0563, training acc = 0.98
+Batch [200/704] training loss = 0.0532, training acc = 0.97
+Batch [400/704] training loss = 0.0520, training acc = 0.97
+Batch [600/704] training loss = 0.0169, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.68% (4634/5000), Test loss:0.2903
+Epoch [71/100], Passed time:[74.083/5259.901]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0643, training acc = 0.97
+Batch [200/704] training loss = 0.0699, training acc = 0.98
+Batch [400/704] training loss = 0.0246, training acc = 1.00
+Batch [600/704] training loss = 0.0663, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.36% (4618/5000), Test loss:0.3019
+Epoch [72/100], Passed time:[74.239/5345.221]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0308, training acc = 0.98
+Batch [200/704] training loss = 0.0553, training acc = 0.97
+Batch [400/704] training loss = 0.0491, training acc = 0.97
+Batch [600/704] training loss = 0.0118, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.26% (4613/5000), Test loss:0.2910
+Epoch [73/100], Passed time:[74.380/5429.731]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0466, training acc = 0.98
+Batch [200/704] training loss = 0.1163, training acc = 0.97
+Batch [400/704] training loss = 0.1896, training acc = 0.97
+Batch [600/704] training loss = 0.0094, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.68% (4634/5000), Test loss:0.2922
+Epoch [74/100], Passed time:[74.519/5514.390]
+learning rate: 0.010000000000000002
+Batch [0/704] training loss = 0.0629, training acc = 0.97
+Batch [200/704] training loss = 0.0341, training acc = 0.98
+Batch [400/704] training loss = 0.0175, training acc = 1.00
+Batch [600/704] training loss = 0.0837, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.98% (4649/5000), Test loss:0.2901
+Epoch [75/100], Passed time:[74.644/5598.271]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0165, training acc = 1.00
+Batch [200/704] training loss = 0.0760, training acc = 0.94
+Batch [400/704] training loss = 0.0061, training acc = 1.00
+Batch [600/704] training loss = 0.0152, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.88% (4644/5000), Test loss:0.2964
+Epoch [76/100], Passed time:[74.764/5682.043]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0172, training acc = 0.98
+Batch [200/704] training loss = 0.0203, training acc = 1.00
+Batch [400/704] training loss = 0.0110, training acc = 1.00
+Batch [600/704] training loss = 0.0965, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.04% (4652/5000), Test loss:0.2833
+Epoch [77/100], Passed time:[74.914/5768.364]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0086, training acc = 1.00
+Batch [200/704] training loss = 0.0022, training acc = 1.00
+Batch [400/704] training loss = 0.0029, training acc = 1.00
+Batch [600/704] training loss = 0.0077, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.02% (4651/5000), Test loss:0.2842
+Epoch [78/100], Passed time:[75.023/5851.791]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.1059, training acc = 0.95
+Batch [200/704] training loss = 0.0340, training acc = 0.98
+Batch [400/704] training loss = 0.0060, training acc = 1.00
+Batch [600/704] training loss = 0.0029, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.74% (4637/5000), Test loss:0.2876
+Epoch [79/100], Passed time:[75.113/5933.925]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0077, training acc = 1.00
+Batch [200/704] training loss = 0.0037, training acc = 1.00
+Batch [400/704] training loss = 0.0607, training acc = 0.98
+Batch [600/704] training loss = 0.0944, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.88% (4644/5000), Test loss:0.2854
+Epoch [80/100], Passed time:[75.214/6017.126]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0318, training acc = 1.00
+Batch [200/704] training loss = 0.0085, training acc = 1.00
+Batch [400/704] training loss = 0.0652, training acc = 0.98
+Batch [600/704] training loss = 0.0229, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.94% (4647/5000), Test loss:0.2811
+Epoch [81/100], Passed time:[75.358/6104.037]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0057, training acc = 1.00
+Batch [200/704] training loss = 0.0257, training acc = 0.97
+Batch [400/704] training loss = 0.0273, training acc = 0.98
+Batch [600/704] training loss = 0.0296, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.08% (4654/5000), Test loss:0.2971
+Epoch [82/100], Passed time:[75.470/6188.526]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0046, training acc = 1.00
+Batch [200/704] training loss = 0.0041, training acc = 1.00
+Batch [400/704] training loss = 0.0157, training acc = 0.98
+Batch [600/704] training loss = 0.0060, training acc = 1.00
+Valid Test with nat
+Test accuracy: 92.96% (4648/5000), Test loss:0.2895
+Epoch [83/100], Passed time:[75.586/6273.668]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0099, training acc = 1.00
+Batch [200/704] training loss = 0.0079, training acc = 1.00
+Batch [400/704] training loss = 0.0079, training acc = 1.00
+Batch [600/704] training loss = 0.0015, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.10% (4655/5000), Test loss:0.2953
+Epoch [84/100], Passed time:[75.713/6359.913]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0033, training acc = 1.00
+Batch [200/704] training loss = 0.0680, training acc = 0.98
+Batch [400/704] training loss = 0.0219, training acc = 0.98
+Batch [600/704] training loss = 0.0197, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.90% (4645/5000), Test loss:0.2898
+Epoch [85/100], Passed time:[75.817/6444.409]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0051, training acc = 1.00
+Batch [200/704] training loss = 0.0034, training acc = 1.00
+Batch [400/704] training loss = 0.0223, training acc = 0.98
+Batch [600/704] training loss = 0.0648, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.82% (4641/5000), Test loss:0.2851
+Epoch [86/100], Passed time:[75.924/6529.482]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0027, training acc = 1.00
+Batch [200/704] training loss = 0.0113, training acc = 1.00
+Batch [400/704] training loss = 0.0501, training acc = 0.98
+Batch [600/704] training loss = 0.0263, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.00% (4650/5000), Test loss:0.2881
+Epoch [87/100], Passed time:[76.025/6614.194]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0299, training acc = 0.98
+Batch [200/704] training loss = 0.0037, training acc = 1.00
+Batch [400/704] training loss = 0.0334, training acc = 0.98
+Batch [600/704] training loss = 0.0220, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.12% (4656/5000), Test loss:0.2876
+Epoch [88/100], Passed time:[76.107/6697.405]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0073, training acc = 1.00
+Batch [200/704] training loss = 0.0031, training acc = 1.00
+Batch [400/704] training loss = 0.0072, training acc = 1.00
+Batch [600/704] training loss = 0.0068, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.06% (4653/5000), Test loss:0.2936
+Epoch [89/100], Passed time:[76.209/6782.565]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0034, training acc = 1.00
+Batch [200/704] training loss = 0.0170, training acc = 0.98
+Batch [400/704] training loss = 0.0100, training acc = 1.00
+Batch [600/704] training loss = 0.0148, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.02% (4651/5000), Test loss:0.2999
+Epoch [90/100], Passed time:[76.292/6866.294]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0590, training acc = 0.98
+Batch [200/704] training loss = 0.0028, training acc = 1.00
+Batch [400/704] training loss = 0.0015, training acc = 1.00
+Batch [600/704] training loss = 0.0173, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.08% (4654/5000), Test loss:0.2852
+Epoch [91/100], Passed time:[76.363/6949.007]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0013, training acc = 1.00
+Batch [200/704] training loss = 0.0237, training acc = 0.98
+Batch [400/704] training loss = 0.0879, training acc = 0.98
+Batch [600/704] training loss = 0.0327, training acc = 0.98
+Valid Test with nat
+Test accuracy: 92.90% (4645/5000), Test loss:0.2906
+Epoch [92/100], Passed time:[76.436/7032.150]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0170, training acc = 0.98
+Batch [200/704] training loss = 0.0387, training acc = 0.98
+Batch [400/704] training loss = 0.0333, training acc = 0.98
+Batch [600/704] training loss = 0.1137, training acc = 0.97
+Valid Test with nat
+Test accuracy: 92.90% (4645/5000), Test loss:0.2939
+Epoch [93/100], Passed time:[76.524/7116.760]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0017, training acc = 1.00
+Batch [200/704] training loss = 0.0034, training acc = 1.00
+Batch [400/704] training loss = 0.0237, training acc = 0.98
+Batch [600/704] training loss = 0.0133, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.12% (4656/5000), Test loss:0.3027
+Epoch [94/100], Passed time:[76.606/7200.972]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0275, training acc = 0.98
+Batch [200/704] training loss = 0.0254, training acc = 0.98
+Batch [400/704] training loss = 0.0026, training acc = 1.00
+Batch [600/704] training loss = 0.0079, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.12% (4656/5000), Test loss:0.2877
+Epoch [95/100], Passed time:[76.685/7285.051]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0042, training acc = 1.00
+Batch [200/704] training loss = 0.0349, training acc = 0.98
+Batch [400/704] training loss = 0.0309, training acc = 0.98
+Batch [600/704] training loss = 0.0094, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.12% (4656/5000), Test loss:0.3035
+Epoch [96/100], Passed time:[76.774/7370.293]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0032, training acc = 1.00
+Batch [200/704] training loss = 0.0018, training acc = 1.00
+Batch [400/704] training loss = 0.0278, training acc = 1.00
+Batch [600/704] training loss = 0.0233, training acc = 0.98
+Valid Test with nat
+Test accuracy: 93.02% (4651/5000), Test loss:0.2881
+Epoch [97/100], Passed time:[76.858/7455.274]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0052, training acc = 1.00
+Batch [200/704] training loss = 0.0130, training acc = 1.00
+Batch [400/704] training loss = 0.0262, training acc = 0.98
+Batch [600/704] training loss = 0.0144, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.26% (4663/5000), Test loss:0.2887
+Epoch [98/100], Passed time:[76.727/7519.222]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0426, training acc = 0.98
+Batch [200/704] training loss = 0.0115, training acc = 1.00
+Batch [400/704] training loss = 0.0622, training acc = 0.97
+Batch [600/704] training loss = 0.0077, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.02% (4651/5000), Test loss:0.2873
+Epoch [99/100], Passed time:[76.574/7580.833]
+learning rate: 0.0010000000000000002
+Batch [0/704] training loss = 0.0041, training acc = 1.00
+Batch [200/704] training loss = 0.0012, training acc = 1.00
+Batch [400/704] training loss = 0.0262, training acc = 0.98
+Batch [600/704] training loss = 0.0049, training acc = 1.00
+Valid Test with nat
+Test accuracy: 93.18% (4659/5000), Test loss:0.2886
+Training done, model saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r56/init_pure/init_enhance_m0.01_warmup0.1.pth
+Test on test set:
+Test accuracy: 92.87% (9287/10000), Test loss:0.2960

@@ -1,0 +1,266 @@
+model_type : vgg16
+init_type : pure
+finetune_method : nat
+enhance_method : nat
+gpu : 5
+model_name : enhance_01_n20
+model_width : 8
+n_pruning_steps : 1
+max_pruning_ratio : 80
+train_epochs : 20
+enhance_epochs : 20
+prune_method : unstructured
+dataset : cifar
+noise_sd : 1.0
+trades_beta : 6.0
+seed : 7
+warmup : True
+create_init : False
+init_step : 1400
+train_method : nat
+early_stop : 50
+norm : True
+optm : sgd
+batch_size : 64
+test_batch_size : 100
+learning_rate : 0.01
+enhance_learning_rate : None
+schedule_length : 10
+weight_decay : 0.0001
+epsilon : 0.03137254901960784
+attack_iter : 10
+eps_step : 0.00784313725490196
+targeted : False
+clip_min : 0
+clip_max : 1.0
+starting_epsilon : 1e-05
+interval_weight : 0.1
+ft_interval_weight : 50
+verbose : 200
+resume : 0
+model_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+last_model_path : ./trained_models_new/
+mask_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/pruned_01_mask_r80.npy
+mask_name : pruned_01_mask_r80
+log_path : ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.log
+init_path : ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+results_path : None
+n_classes : 10
+eval : False
+init : True
+transfer : False
+CUDA enabled.
+Enhance training config:
+Enhance training method: nat
+model will be saved in: ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Init model is: ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Init mask used from: ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/pruned_01_mask_r80.npy
+Log will be saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.log
+Random seed is: 7
+
+model loading from ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Epoch [0/20]
+learning rate: 0.001
+Batch [0/704] training loss = 2.3007, training acc = 0.12
+Batch [200/704] training loss = 1.9372, training acc = 0.31
+Batch [400/704] training loss = 1.6600, training acc = 0.36
+Batch [600/704] training loss = 1.5167, training acc = 0.38
+Valid Test with nat
+Test accuracy: 45.40% (2270/5000), Test loss:1.4998
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 42.25% (4225/10000), Test loss:1.5802
+Epoch [1/20], Passed time:[68.364/68.364]
+learning rate: 0.002
+Batch [0/704] training loss = 1.5090, training acc = 0.52
+Batch [200/704] training loss = 1.4952, training acc = 0.45
+Batch [400/704] training loss = 1.2014, training acc = 0.58
+Batch [600/704] training loss = 1.2566, training acc = 0.55
+Valid Test with nat
+Test accuracy: 57.10% (2855/5000), Test loss:1.2219
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 54.26% (5426/10000), Test loss:1.2939
+Epoch [2/20], Passed time:[70.234/140.469]
+learning rate: 0.0030000000000000005
+Batch [0/704] training loss = 1.1885, training acc = 0.56
+Batch [200/704] training loss = 1.2828, training acc = 0.56
+Batch [400/704] training loss = 1.0869, training acc = 0.61
+Batch [600/704] training loss = 0.9563, training acc = 0.67
+Valid Test with nat
+Test accuracy: 67.62% (3381/5000), Test loss:0.9164
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 68.43% (6843/10000), Test loss:0.9071
+Epoch [3/20], Passed time:[72.585/217.754]
+learning rate: 0.004
+Batch [0/704] training loss = 0.8560, training acc = 0.72
+Batch [200/704] training loss = 1.0250, training acc = 0.64
+Batch [400/704] training loss = 0.9468, training acc = 0.70
+Batch [600/704] training loss = 0.9369, training acc = 0.69
+Valid Test with nat
+Test accuracy: 66.86% (3343/5000), Test loss:1.0157
+Epoch [4/20], Passed time:[72.982/291.927]
+learning rate: 0.005
+Batch [0/704] training loss = 0.8026, training acc = 0.69
+Batch [200/704] training loss = 0.7796, training acc = 0.67
+Batch [400/704] training loss = 1.0861, training acc = 0.58
+Batch [600/704] training loss = 0.7442, training acc = 0.70
+Valid Test with nat
+Test accuracy: 74.84% (3742/5000), Test loss:0.7349
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 75.92% (7592/10000), Test loss:0.7081
+Epoch [5/20], Passed time:[74.441/372.207]
+learning rate: 0.006000000000000001
+Batch [0/704] training loss = 0.9230, training acc = 0.70
+Batch [200/704] training loss = 0.5755, training acc = 0.80
+Batch [400/704] training loss = 0.8954, training acc = 0.67
+Batch [600/704] training loss = 0.7233, training acc = 0.73
+Valid Test with nat
+Test accuracy: 73.10% (3655/5000), Test loss:0.7921
+Epoch [6/20], Passed time:[73.285/439.709]
+learning rate: 0.007000000000000001
+Batch [0/704] training loss = 0.6447, training acc = 0.77
+Batch [200/704] training loss = 0.7494, training acc = 0.75
+Batch [400/704] training loss = 0.6022, training acc = 0.83
+Batch [600/704] training loss = 0.8186, training acc = 0.75
+Valid Test with nat
+Test accuracy: 76.88% (3844/5000), Test loss:0.6955
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 75.44% (7544/10000), Test loss:0.7117
+Epoch [7/20], Passed time:[74.777/523.436]
+learning rate: 0.008
+Batch [0/704] training loss = 0.6251, training acc = 0.78
+Batch [200/704] training loss = 0.7703, training acc = 0.75
+Batch [400/704] training loss = 0.6965, training acc = 0.75
+Batch [600/704] training loss = 0.6854, training acc = 0.77
+Valid Test with nat
+Test accuracy: 73.44% (3672/5000), Test loss:0.8059
+Epoch [8/20], Passed time:[75.217/601.733]
+learning rate: 0.009000000000000001
+Batch [0/704] training loss = 0.7853, training acc = 0.78
+Batch [200/704] training loss = 0.6545, training acc = 0.78
+Batch [400/704] training loss = 0.5901, training acc = 0.77
+Batch [600/704] training loss = 0.5577, training acc = 0.80
+Valid Test with nat
+Test accuracy: 76.22% (3811/5000), Test loss:0.7058
+Epoch [9/20], Passed time:[75.115/676.035]
+learning rate: 0.01
+Batch [0/704] training loss = 0.5266, training acc = 0.80
+Batch [200/704] training loss = 0.5215, training acc = 0.78
+Batch [400/704] training loss = 0.5501, training acc = 0.80
+Batch [600/704] training loss = 0.4698, training acc = 0.81
+Valid Test with nat
+Test accuracy: 81.36% (4068/5000), Test loss:0.5488
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 81.32% (8132/10000), Test loss:0.5597
+Epoch [10/20], Passed time:[75.485/754.845]
+learning rate: 0.001
+Batch [0/704] training loss = 0.3485, training acc = 0.89
+Batch [200/704] training loss = 0.3157, training acc = 0.91
+Batch [400/704] training loss = 0.4668, training acc = 0.78
+Batch [600/704] training loss = 0.4945, training acc = 0.89
+Valid Test with nat
+Test accuracy: 85.00% (4250/5000), Test loss:0.4434
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 84.86% (8486/10000), Test loss:0.4470
+Epoch [11/20], Passed time:[75.813/833.945]
+learning rate: 0.001
+Batch [0/704] training loss = 0.5846, training acc = 0.83
+Batch [200/704] training loss = 0.5324, training acc = 0.77
+Batch [400/704] training loss = 0.4128, training acc = 0.84
+Batch [600/704] training loss = 0.4043, training acc = 0.86
+Valid Test with nat
+Test accuracy: 85.56% (4278/5000), Test loss:0.4331
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 85.42% (8542/10000), Test loss:0.4344
+Epoch [12/20], Passed time:[76.510/918.115]
+learning rate: 0.001
+Batch [0/704] training loss = 0.3480, training acc = 0.89
+Batch [200/704] training loss = 0.5205, training acc = 0.81
+Batch [400/704] training loss = 0.3990, training acc = 0.88
+Batch [600/704] training loss = 0.4310, training acc = 0.89
+Valid Test with nat
+Test accuracy: 85.74% (4287/5000), Test loss:0.4219
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 85.37% (8537/10000), Test loss:0.4290
+Epoch [13/20], Passed time:[76.646/996.393]
+learning rate: 0.001
+Batch [0/704] training loss = 0.3627, training acc = 0.88
+Batch [200/704] training loss = 0.3709, training acc = 0.86
+Batch [400/704] training loss = 0.4417, training acc = 0.88
+Batch [600/704] training loss = 0.3423, training acc = 0.89
+Valid Test with nat
+Test accuracy: 85.78% (4289/5000), Test loss:0.4255
+Epoch [14/20], Passed time:[77.128/1079.795]
+learning rate: 0.001
+Batch [0/704] training loss = 0.3601, training acc = 0.83
+Batch [200/704] training loss = 0.6120, training acc = 0.77
+Batch [400/704] training loss = 0.2692, training acc = 0.92
+Batch [600/704] training loss = 0.2736, training acc = 0.94
+Valid Test with nat
+Test accuracy: 86.20% (4310/5000), Test loss:0.4173
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.08% (8608/10000), Test loss:0.4133
+Epoch [15/20], Passed time:[77.194/1157.913]
+learning rate: 0.0001
+Batch [0/704] training loss = 0.4130, training acc = 0.88
+Batch [200/704] training loss = 0.4951, training acc = 0.80
+Batch [400/704] training loss = 0.2959, training acc = 0.92
+Batch [600/704] training loss = 0.3248, training acc = 0.91
+Valid Test with nat
+Test accuracy: 86.36% (4318/5000), Test loss:0.4095
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.11% (8611/10000), Test loss:0.4089
+Epoch [16/20], Passed time:[77.732/1243.704]
+learning rate: 0.0001
+Batch [0/704] training loss = 0.4928, training acc = 0.83
+Batch [200/704] training loss = 0.2467, training acc = 0.91
+Batch [400/704] training loss = 0.2274, training acc = 0.95
+Batch [600/704] training loss = 0.3141, training acc = 0.86
+Valid Test with nat
+Test accuracy: 86.46% (4323/5000), Test loss:0.4066
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.36% (8636/10000), Test loss:0.4091
+Epoch [17/20], Passed time:[77.875/1323.882]
+learning rate: 0.0001
+Batch [0/704] training loss = 0.4410, training acc = 0.84
+Batch [200/704] training loss = 0.4514, training acc = 0.84
+Batch [400/704] training loss = 0.2948, training acc = 0.89
+Batch [600/704] training loss = 0.4937, training acc = 0.89
+Valid Test with nat
+Test accuracy: 86.56% (4328/5000), Test loss:0.4046
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.53% (8653/10000), Test loss:0.3994
+Epoch [18/20], Passed time:[78.145/1406.612]
+learning rate: 0.0001
+Batch [0/704] training loss = 0.4423, training acc = 0.84
+Batch [200/704] training loss = 0.3214, training acc = 0.92
+Batch [400/704] training loss = 0.3024, training acc = 0.91
+Batch [600/704] training loss = 0.2898, training acc = 0.89
+Valid Test with nat
+Test accuracy: 86.30% (4315/5000), Test loss:0.4088
+Epoch [19/20], Passed time:[78.196/1485.719]
+learning rate: 0.0001
+Batch [0/704] training loss = 0.4319, training acc = 0.84
+Batch [200/704] training loss = 0.3648, training acc = 0.86
+Batch [400/704] training loss = 0.3770, training acc = 0.88
+Batch [600/704] training loss = 0.2183, training acc = 0.94
+Valid Test with nat
+Test accuracy: 86.24% (4312/5000), Test loss:0.4040
+Best model so far saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.28% (8628/10000), Test loss:0.4077
+Training done, model saved in ./trained_models_new/cifar/vgg16/nat/pruned1_epoch100_r80/init_pure/enhance_01_n20.pth
+Test on test set:
+Test accuracy: 86.28% (8628/10000), Test loss:0.4077

@@ -1,0 +1,1167 @@
+epsilon : 0.03137254901960784
+max_pruning_ratio : 80
+trades_beta : 6.0
+batch_size : 64
+interval_weight : 0.1
+train_method : nat
+weight_decay : 0.0001
+gpu : 2
+noise_sd : 1.0
+learning_rate : 0.1
+verbose : 200
+attack_iter : 10
+model_type : vgg16
+schedule_length : 10
+train_epochs : 100
+init : True
+log_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/init_enhance_madry_m0.01_warmup0.1_nn.log
+seed : 7
+mask_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/pruned_lr0.01_nn_mask_r80.npy
+ft_interval_weight : 50
+optm : sgd
+transfer : False
+norm : False
+parallel : False
+n_pruning_steps : 1
+clip_max : 1.0
+early_stop : 1000
+init_type : pure
+last_model_path : ./trained_models_new/
+prune_method : unstructured
+dataset : cifar
+model_width : 8
+eps_step : 0.00784313725490196
+clip_min : 0
+mask_name : pruned_lr0.01_nn_mask_r80
+test_batch_size : 100
+init_step : 1400
+n_classes : 10
+warmup : True
+starting_epsilon : 1e-05
+init_path : ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+create_init : False
+enhance_learning_rate : 0.1
+enhance_epochs : 100
+resume : 0
+enhance_method : madry
+finetune_method : fgsm
+model_path : ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/init_enhance_madry_m0.01_warmup0.1_nn.pth
+results_path : None
+targeted : False
+eval : False
+model_name : init_enhance_madry_m0.01_warmup0.1_nn
+CUDA enabled.
+Enhance training config:
+Enhance training method: madry
+model will be saved in: ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/init_enhance_madry_m0.01_warmup0.1_nn.pth
+Init model is: ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Init mask used from: ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/pruned_lr0.01_nn_mask_r80.npy
+Log will be saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/init_enhance_madry_m0.01_warmup0.1_nn.log
+Random seed is: 7
+
+model loading from ./trained_models_new/cifar/vgg16/init/pure_vgg16_init.pth
+Epoch [0/100]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 2.21471620, training pgd_acc = 0.31250000
+Batch [200/704] training loss = 1.98131180, training pgd_acc = 0.26562500
+Batch [400/704] training loss = 1.94893754, training pgd_acc = 0.26562500
+Batch [600/704] training loss = 1.58362937, training pgd_acc = 0.40625000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 60.60% (3030/5000)
+Adversarial accuracy: 35.22% (1761/5000)
+Epoch [1/100], Passed time:[164.899/164.899]
+learning rate: 0.020000000000000004
+Train with PGD
+Batch [0/704] training loss = 1.58198965, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.66481006, training pgd_acc = 0.31250000
+Batch [400/704] training loss = 1.83782518, training pgd_acc = 0.34375000
+Batch [600/704] training loss = 1.68222177, training pgd_acc = 0.34375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 64.14% (3207/5000)
+Adversarial accuracy: 37.42% (1871/5000)
+Epoch [2/100], Passed time:[164.666/329.332]
+learning rate: 0.030000000000000006
+Train with PGD
+Batch [0/704] training loss = 1.57721210, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.49257410, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.56806993, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.52697766, training pgd_acc = 0.37500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 63.78% (3189/5000)
+Adversarial accuracy: 37.68% (1884/5000)
+Epoch [3/100], Passed time:[164.573/493.718]
+learning rate: 0.04000000000000001
+Train with PGD
+Batch [0/704] training loss = 1.53189564, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.70202982, training pgd_acc = 0.28125000
+Batch [400/704] training loss = 1.47331977, training pgd_acc = 0.53125000
+Batch [600/704] training loss = 1.56337142, training pgd_acc = 0.35937500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 67.80% (3390/5000)
+Adversarial accuracy: 39.68% (1984/5000)
+Epoch [4/100], Passed time:[164.574/658.298]
+learning rate: 0.05
+Train with PGD
+Batch [0/704] training loss = 1.68363643, training pgd_acc = 0.39062500
+Batch [200/704] training loss = 1.46656895, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.46582627, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.61304533, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 67.32% (3366/5000)
+Adversarial accuracy: 39.36% (1968/5000)
+Epoch [5/100], Passed time:[164.556/822.781]
+learning rate: 0.06000000000000001
+Train with PGD
+Batch [0/704] training loss = 1.46913290, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.37345898, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.32982826, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.47729850, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 66.70% (3335/5000)
+Adversarial accuracy: 39.14% (1957/5000)
+Epoch [6/100], Passed time:[164.557/987.340]
+learning rate: 0.07
+Train with PGD
+Batch [0/704] training loss = 1.60559773, training pgd_acc = 0.37500000
+Batch [200/704] training loss = 1.70911694, training pgd_acc = 0.35937500
+Batch [400/704] training loss = 1.75456727, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.60911894, training pgd_acc = 0.32812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.28% (3414/5000)
+Adversarial accuracy: 38.52% (1926/5000)
+Epoch [7/100], Passed time:[164.566/1151.963]
+learning rate: 0.08000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.60936904, training pgd_acc = 0.31250000
+Batch [200/704] training loss = 1.50945580, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.48402858, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.53839362, training pgd_acc = 0.34375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.92% (3446/5000)
+Adversarial accuracy: 40.16% (2008/5000)
+Epoch [8/100], Passed time:[164.578/1316.625]
+learning rate: 0.09000000000000001
+Train with PGD
+Batch [0/704] training loss = 1.40619683, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 1.49912345, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.59847212, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.41384208, training pgd_acc = 0.42187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 65.76% (3288/5000)
+Adversarial accuracy: 35.98% (1799/5000)
+Epoch [9/100], Passed time:[164.576/1481.185]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.70544028, training pgd_acc = 0.39062500
+Batch [200/704] training loss = 1.59593117, training pgd_acc = 0.43750000
+Batch [400/704] training loss = 1.55888855, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.68882847, training pgd_acc = 0.26562500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.50% (3475/5000)
+Adversarial accuracy: 40.84% (2042/5000)
+Epoch [10/100], Passed time:[164.605/1646.047]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.60285616, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.43589604, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.43597603, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.54008806, training pgd_acc = 0.45312500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.78% (3439/5000)
+Adversarial accuracy: 39.46% (1973/5000)
+Epoch [11/100], Passed time:[164.604/1810.642]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.54202259, training pgd_acc = 0.40625000
+Batch [200/704] training loss = 1.52274990, training pgd_acc = 0.37500000
+Batch [400/704] training loss = 1.52957058, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.43855166, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.00% (3450/5000)
+Adversarial accuracy: 39.44% (1972/5000)
+Epoch [12/100], Passed time:[164.591/1975.094]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.48077285, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.59683502, training pgd_acc = 0.39062500
+Batch [400/704] training loss = 1.79568255, training pgd_acc = 0.34375000
+Batch [600/704] training loss = 1.31823921, training pgd_acc = 0.51562500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.86% (3443/5000)
+Adversarial accuracy: 39.14% (1957/5000)
+Epoch [13/100], Passed time:[164.589/2139.654]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.46120203, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.61032689, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.47918916, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.56142247, training pgd_acc = 0.32812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 65.56% (3278/5000)
+Adversarial accuracy: 38.94% (1947/5000)
+Epoch [14/100], Passed time:[164.604/2304.451]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.46057582, training pgd_acc = 0.46875000
+Batch [200/704] training loss = 1.56580532, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.54115248, training pgd_acc = 0.37500000
+Batch [600/704] training loss = 1.58142149, training pgd_acc = 0.32812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.96% (3498/5000)
+Adversarial accuracy: 41.04% (2052/5000)
+Epoch [15/100], Passed time:[164.616/2469.233]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.42693841, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.44946086, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.59143674, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.52023709, training pgd_acc = 0.39062500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.94% (3497/5000)
+Adversarial accuracy: 40.18% (2009/5000)
+Epoch [16/100], Passed time:[164.607/2633.708]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.38474512, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.85745859, training pgd_acc = 0.28125000
+Batch [400/704] training loss = 1.46139097, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.38984907, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.18% (3459/5000)
+Adversarial accuracy: 41.24% (2062/5000)
+Epoch [17/100], Passed time:[164.593/2798.074]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.41652882, training pgd_acc = 0.51562500
+Batch [200/704] training loss = 1.46590674, training pgd_acc = 0.43750000
+Batch [400/704] training loss = 1.41482437, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.68381011, training pgd_acc = 0.34375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.90% (3545/5000)
+Adversarial accuracy: 40.76% (2038/5000)
+Epoch [18/100], Passed time:[164.591/2962.629]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.75905347, training pgd_acc = 0.29687500
+Batch [200/704] training loss = 1.28002834, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.44082379, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.75150144, training pgd_acc = 0.34375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.84% (3442/5000)
+Adversarial accuracy: 41.26% (2063/5000)
+Epoch [19/100], Passed time:[164.577/3126.963]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.48382485, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.48399806, training pgd_acc = 0.34375000
+Batch [400/704] training loss = 1.54633260, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.52434480, training pgd_acc = 0.45312500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.68% (3534/5000)
+Adversarial accuracy: 41.52% (2076/5000)
+Epoch [20/100], Passed time:[164.580/3291.595]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.50726104, training pgd_acc = 0.40625000
+Batch [200/704] training loss = 1.55019414, training pgd_acc = 0.40625000
+Batch [400/704] training loss = 1.78590930, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.55515134, training pgd_acc = 0.37500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 67.44% (3372/5000)
+Adversarial accuracy: 41.08% (2054/5000)
+Epoch [21/100], Passed time:[164.588/3456.351]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.44860351, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.46898580, training pgd_acc = 0.35937500
+Batch [400/704] training loss = 1.45405507, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.44383192, training pgd_acc = 0.42187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.38% (3519/5000)
+Adversarial accuracy: 40.32% (2016/5000)
+Epoch [22/100], Passed time:[164.582/3620.807]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.36121082, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.50866437, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.48895919, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.41331112, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.46% (3523/5000)
+Adversarial accuracy: 41.48% (2074/5000)
+Epoch [23/100], Passed time:[164.581/3785.367]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.39195752, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.55857301, training pgd_acc = 0.35937500
+Batch [400/704] training loss = 1.61275339, training pgd_acc = 0.34375000
+Batch [600/704] training loss = 1.57202351, training pgd_acc = 0.40625000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.04% (3402/5000)
+Adversarial accuracy: 39.98% (1999/5000)
+Epoch [24/100], Passed time:[164.573/3949.750]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.39088511, training pgd_acc = 0.51562500
+Batch [200/704] training loss = 1.79822934, training pgd_acc = 0.28125000
+Batch [400/704] training loss = 1.73177087, training pgd_acc = 0.34375000
+Batch [600/704] training loss = 1.45554757, training pgd_acc = 0.45312500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.30% (3415/5000)
+Adversarial accuracy: 39.30% (1965/5000)
+Epoch [25/100], Passed time:[164.571/4114.275]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.34571540, training pgd_acc = 0.46875000
+Batch [200/704] training loss = 1.43645370, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.46471024, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.67106867, training pgd_acc = 0.34375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.92% (3446/5000)
+Adversarial accuracy: 41.72% (2086/5000)
+Epoch [26/100], Passed time:[164.572/4278.870]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.45798576, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.43289888, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.77775526, training pgd_acc = 0.31250000
+Batch [600/704] training loss = 1.53189361, training pgd_acc = 0.39062500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.96% (3448/5000)
+Adversarial accuracy: 39.82% (1991/5000)
+Epoch [27/100], Passed time:[164.567/4443.316]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.38672268, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.37476814, training pgd_acc = 0.40625000
+Batch [400/704] training loss = 1.42503214, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.43713903, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.00% (3400/5000)
+Adversarial accuracy: 40.26% (2013/5000)
+Epoch [28/100], Passed time:[164.584/4608.339]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.48701859, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.36986899, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.43381727, training pgd_acc = 0.51562500
+Batch [600/704] training loss = 1.42915046, training pgd_acc = 0.56250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.48% (3474/5000)
+Adversarial accuracy: 41.22% (2061/5000)
+Epoch [29/100], Passed time:[164.583/4772.920]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.48204529, training pgd_acc = 0.46875000
+Batch [200/704] training loss = 1.57279646, training pgd_acc = 0.39062500
+Batch [400/704] training loss = 1.39075124, training pgd_acc = 0.51562500
+Batch [600/704] training loss = 2.01719832, training pgd_acc = 0.37500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.46% (3423/5000)
+Adversarial accuracy: 41.62% (2081/5000)
+Epoch [30/100], Passed time:[164.587/4937.598]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.64632595, training pgd_acc = 0.34375000
+Batch [200/704] training loss = 1.45252061, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.52051997, training pgd_acc = 0.35937500
+Batch [600/704] training loss = 1.31705403, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.82% (3491/5000)
+Adversarial accuracy: 41.42% (2071/5000)
+Epoch [31/100], Passed time:[164.587/5102.186]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.68451703, training pgd_acc = 0.32812500
+Batch [200/704] training loss = 1.60795105, training pgd_acc = 0.28125000
+Batch [400/704] training loss = 1.79120672, training pgd_acc = 0.26562500
+Batch [600/704] training loss = 1.85326076, training pgd_acc = 0.29687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.36% (3418/5000)
+Adversarial accuracy: 41.34% (2067/5000)
+Epoch [32/100], Passed time:[164.587/5266.798]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.56428742, training pgd_acc = 0.32812500
+Batch [200/704] training loss = 1.70201933, training pgd_acc = 0.29687500
+Batch [400/704] training loss = 1.57900667, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.38409436, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.36% (3468/5000)
+Adversarial accuracy: 40.94% (2047/5000)
+Epoch [33/100], Passed time:[164.588/5431.391]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.40898192, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.46533251, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.61099911, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.42569101, training pgd_acc = 0.31250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.70% (3435/5000)
+Adversarial accuracy: 40.00% (2000/5000)
+Epoch [34/100], Passed time:[164.588/5595.982]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.49780297, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.35143900, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.41855574, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.53364503, training pgd_acc = 0.35937500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.32% (3516/5000)
+Adversarial accuracy: 41.82% (2091/5000)
+Epoch [35/100], Passed time:[164.591/5760.694]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.64635420, training pgd_acc = 0.35937500
+Batch [200/704] training loss = 1.55280137, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.44762731, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.68790996, training pgd_acc = 0.39062500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 68.40% (3420/5000)
+Adversarial accuracy: 41.04% (2052/5000)
+Epoch [36/100], Passed time:[164.590/5925.252]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.48263192, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.57305002, training pgd_acc = 0.37500000
+Batch [400/704] training loss = 1.79527450, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.36875260, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.18% (3459/5000)
+Adversarial accuracy: 41.44% (2072/5000)
+Epoch [37/100], Passed time:[164.591/6089.867]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.23457289, training pgd_acc = 0.57812500
+Batch [200/704] training loss = 1.44541276, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.46394897, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.48177195, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 67.34% (3367/5000)
+Adversarial accuracy: 39.82% (1991/5000)
+Epoch [38/100], Passed time:[164.590/6254.419]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.52178216, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.45793915, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.48818910, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.42915273, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 66.84% (3342/5000)
+Adversarial accuracy: 41.34% (2067/5000)
+Epoch [39/100], Passed time:[164.590/6419.007]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.59093773, training pgd_acc = 0.42187500
+Batch [200/704] training loss = 1.30467880, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.34625864, training pgd_acc = 0.54687500
+Batch [600/704] training loss = 1.44121110, training pgd_acc = 0.53125000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 66.86% (3343/5000)
+Adversarial accuracy: 36.86% (1843/5000)
+Epoch [40/100], Passed time:[164.591/6583.646]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.47389030, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.28523111, training pgd_acc = 0.56250000
+Batch [400/704] training loss = 1.31798601, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.75551581, training pgd_acc = 0.35937500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 65.78% (3289/5000)
+Adversarial accuracy: 40.70% (2035/5000)
+Epoch [41/100], Passed time:[164.588/6748.123]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.34146917, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.61854327, training pgd_acc = 0.34375000
+Batch [400/704] training loss = 1.48169672, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.43909454, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.08% (3504/5000)
+Adversarial accuracy: 41.60% (2080/5000)
+Epoch [42/100], Passed time:[164.589/6912.736]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.44301212, training pgd_acc = 0.46875000
+Batch [200/704] training loss = 1.49024820, training pgd_acc = 0.39062500
+Batch [400/704] training loss = 1.42160773, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.63505197, training pgd_acc = 0.35937500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.46% (3523/5000)
+Adversarial accuracy: 41.58% (2079/5000)
+Epoch [43/100], Passed time:[164.585/7077.156]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.40426087, training pgd_acc = 0.51562500
+Batch [200/704] training loss = 1.50799596, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.66763973, training pgd_acc = 0.35937500
+Batch [600/704] training loss = 1.39524162, training pgd_acc = 0.43750000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.28% (3514/5000)
+Adversarial accuracy: 40.52% (2026/5000)
+Epoch [44/100], Passed time:[164.587/7241.807]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.39837515, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.36628115, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.63691831, training pgd_acc = 0.29687500
+Batch [600/704] training loss = 1.41550946, training pgd_acc = 0.46875000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.16% (3508/5000)
+Adversarial accuracy: 40.94% (2047/5000)
+Epoch [45/100], Passed time:[164.586/7406.351]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.34843898, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.55691707, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.38014138, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.39877713, training pgd_acc = 0.37500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 70.00% (3500/5000)
+Adversarial accuracy: 41.38% (2069/5000)
+Epoch [46/100], Passed time:[164.588/7571.034]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.53287315, training pgd_acc = 0.37500000
+Batch [200/704] training loss = 1.59267294, training pgd_acc = 0.42187500
+Batch [400/704] training loss = 1.38454413, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.34803557, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.06% (3453/5000)
+Adversarial accuracy: 41.90% (2095/5000)
+Epoch [47/100], Passed time:[164.585/7735.498]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.71527684, training pgd_acc = 0.37500000
+Batch [200/704] training loss = 1.55745530, training pgd_acc = 0.43750000
+Batch [400/704] training loss = 1.47059214, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.47388029, training pgd_acc = 0.39062500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.30% (3465/5000)
+Adversarial accuracy: 39.96% (1998/5000)
+Epoch [48/100], Passed time:[164.584/7900.049]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.78495133, training pgd_acc = 0.31250000
+Batch [200/704] training loss = 1.32763863, training pgd_acc = 0.51562500
+Batch [400/704] training loss = 1.54281259, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.45351100, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.12% (3456/5000)
+Adversarial accuracy: 39.88% (1994/5000)
+Epoch [49/100], Passed time:[164.586/8064.704]
+learning rate: 0.1
+Train with PGD
+Batch [0/704] training loss = 1.68549848, training pgd_acc = 0.29687500
+Batch [200/704] training loss = 1.54518974, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.55761862, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.52083337, training pgd_acc = 0.42187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 69.94% (3497/5000)
+Adversarial accuracy: 41.66% (2083/5000)
+Epoch [50/100], Passed time:[164.583/8229.140]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.37295723, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.40027261, training pgd_acc = 0.40625000
+Batch [400/704] training loss = 1.21013796, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.34272671, training pgd_acc = 0.56250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 74.50% (3725/5000)
+Adversarial accuracy: 45.26% (2263/5000)
+Epoch [51/100], Passed time:[164.585/8393.850]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.51048911, training pgd_acc = 0.39062500
+Batch [200/704] training loss = 1.16741359, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.20035100, training pgd_acc = 0.54687500
+Batch [600/704] training loss = 1.34850919, training pgd_acc = 0.51562500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.62% (3781/5000)
+Adversarial accuracy: 45.30% (2265/5000)
+Epoch [52/100], Passed time:[164.585/8558.429]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.36985338, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.34874129, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.39730763, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.25136507, training pgd_acc = 0.59375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.12% (3756/5000)
+Adversarial accuracy: 45.38% (2269/5000)
+Epoch [53/100], Passed time:[164.586/8723.039]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.29557335, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.26051688, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.40544677, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.53917360, training pgd_acc = 0.46875000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.30% (3765/5000)
+Adversarial accuracy: 45.80% (2290/5000)
+Epoch [54/100], Passed time:[164.586/8887.637]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.35901034, training pgd_acc = 0.56250000
+Batch [200/704] training loss = 1.42144024, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.33694160, training pgd_acc = 0.53125000
+Batch [600/704] training loss = 1.26779222, training pgd_acc = 0.56250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.58% (3779/5000)
+Adversarial accuracy: 45.06% (2253/5000)
+Epoch [55/100], Passed time:[164.585/9052.187]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19536257, training pgd_acc = 0.56250000
+Batch [200/704] training loss = 1.50029898, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.27773654, training pgd_acc = 0.51562500
+Batch [600/704] training loss = 1.10282290, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.22% (3761/5000)
+Adversarial accuracy: 45.74% (2287/5000)
+Epoch [56/100], Passed time:[164.585/9216.750]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.23885095, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.18612862, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.27410054, training pgd_acc = 0.56250000
+Batch [600/704] training loss = 1.22681201, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.54% (3777/5000)
+Adversarial accuracy: 45.44% (2272/5000)
+Epoch [57/100], Passed time:[164.587/9381.440]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.21843672, training pgd_acc = 0.59375000
+Batch [200/704] training loss = 1.50670362, training pgd_acc = 0.37500000
+Batch [400/704] training loss = 1.39179766, training pgd_acc = 0.37500000
+Batch [600/704] training loss = 1.12669933, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.40% (3770/5000)
+Adversarial accuracy: 46.34% (2317/5000)
+Epoch [58/100], Passed time:[164.590/9546.214]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.36393142, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.38939559, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.26053751, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.22402191, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.68% (3784/5000)
+Adversarial accuracy: 45.74% (2287/5000)
+Epoch [59/100], Passed time:[164.589/9710.771]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.30919623, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 1.13339126, training pgd_acc = 0.60937500
+Batch [400/704] training loss = 1.22319961, training pgd_acc = 0.53125000
+Batch [600/704] training loss = 1.23566985, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.06% (3803/5000)
+Adversarial accuracy: 45.22% (2261/5000)
+Epoch [60/100], Passed time:[164.590/9875.383]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.49363768, training pgd_acc = 0.37500000
+Batch [200/704] training loss = 1.29893136, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.52370119, training pgd_acc = 0.40625000
+Batch [600/704] training loss = 1.33686650, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.02% (3751/5000)
+Adversarial accuracy: 46.10% (2305/5000)
+Epoch [61/100], Passed time:[164.588/10039.894]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.12914646, training pgd_acc = 0.51562500
+Batch [200/704] training loss = 1.46843278, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.36370862, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.08679533, training pgd_acc = 0.62500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.16% (3758/5000)
+Adversarial accuracy: 45.88% (2294/5000)
+Epoch [62/100], Passed time:[164.591/10204.634]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.42597735, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 1.14105201, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.32500160, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.18396068, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.08% (3754/5000)
+Adversarial accuracy: 45.82% (2291/5000)
+Epoch [63/100], Passed time:[164.591/10369.209]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.28073263, training pgd_acc = 0.46875000
+Batch [200/704] training loss = 1.22638488, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.36018312, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.26856565, training pgd_acc = 0.56250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.16% (3808/5000)
+Adversarial accuracy: 45.12% (2256/5000)
+Epoch [64/100], Passed time:[164.588/10533.634]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19036067, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 1.37020326, training pgd_acc = 0.40625000
+Batch [400/704] training loss = 1.23970270, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.25090945, training pgd_acc = 0.56250000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.52% (3776/5000)
+Adversarial accuracy: 45.80% (2290/5000)
+Epoch [65/100], Passed time:[164.588/10698.203]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19085860, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.11167860, training pgd_acc = 0.59375000
+Batch [400/704] training loss = 1.20232356, training pgd_acc = 0.54687500
+Batch [600/704] training loss = 1.22446501, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.18% (3809/5000)
+Adversarial accuracy: 45.98% (2299/5000)
+Epoch [66/100], Passed time:[164.586/10862.645]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.06437719, training pgd_acc = 0.64062500
+Batch [200/704] training loss = 1.31459570, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.45235825, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.21951437, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.96% (3848/5000)
+Adversarial accuracy: 45.34% (2267/5000)
+Epoch [67/100], Passed time:[164.583/11027.082]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.13581777, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.43902433, training pgd_acc = 0.40625000
+Batch [400/704] training loss = 1.09237850, training pgd_acc = 0.57812500
+Batch [600/704] training loss = 1.45059478, training pgd_acc = 0.37500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.98% (3799/5000)
+Adversarial accuracy: 45.48% (2274/5000)
+Epoch [68/100], Passed time:[164.581/11191.526]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19668078, training pgd_acc = 0.57812500
+Batch [200/704] training loss = 1.10378826, training pgd_acc = 0.62500000
+Batch [400/704] training loss = 1.12948012, training pgd_acc = 0.60937500
+Batch [600/704] training loss = 1.14476192, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.26% (3813/5000)
+Adversarial accuracy: 45.68% (2284/5000)
+Epoch [69/100], Passed time:[164.582/11356.176]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.35271883, training pgd_acc = 0.40625000
+Batch [200/704] training loss = 1.26384854, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.23494565, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.28225732, training pgd_acc = 0.53125000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.28% (3814/5000)
+Adversarial accuracy: 45.16% (2258/5000)
+Epoch [70/100], Passed time:[164.581/11520.690]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.10063946, training pgd_acc = 0.62500000
+Batch [200/704] training loss = 1.46895444, training pgd_acc = 0.39062500
+Batch [400/704] training loss = 1.45411134, training pgd_acc = 0.43750000
+Batch [600/704] training loss = 1.43079364, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.14% (3807/5000)
+Adversarial accuracy: 45.42% (2271/5000)
+Epoch [71/100], Passed time:[164.582/11685.321]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.23774350, training pgd_acc = 0.59375000
+Batch [200/704] training loss = 1.42192900, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.34415102, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.39156926, training pgd_acc = 0.42187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.02% (3801/5000)
+Adversarial accuracy: 44.62% (2231/5000)
+Epoch [72/100], Passed time:[164.580/11849.772]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.15855610, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.18257463, training pgd_acc = 0.64062500
+Batch [400/704] training loss = 1.35161602, training pgd_acc = 0.42187500
+Batch [600/704] training loss = 1.26353335, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.46% (3823/5000)
+Adversarial accuracy: 45.08% (2254/5000)
+Epoch [73/100], Passed time:[164.580/12014.354]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.12912977, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 1.25883245, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.17069161, training pgd_acc = 0.59375000
+Batch [600/704] training loss = 1.23877573, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.76% (3838/5000)
+Adversarial accuracy: 44.80% (2240/5000)
+Epoch [74/100], Passed time:[164.582/12179.058]
+learning rate: 0.010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.16478419, training pgd_acc = 0.57812500
+Batch [200/704] training loss = 1.19323897, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.21093917, training pgd_acc = 0.51562500
+Batch [600/704] training loss = 1.17709684, training pgd_acc = 0.59375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 75.52% (3776/5000)
+Adversarial accuracy: 44.74% (2237/5000)
+Epoch [75/100], Passed time:[164.581/12343.605]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.42338312, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.17640722, training pgd_acc = 0.51562500
+Batch [400/704] training loss = 1.36519921, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.26819491, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.92% (3846/5000)
+Adversarial accuracy: 45.08% (2254/5000)
+Epoch [76/100], Passed time:[164.582/12508.227]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 0.94758493, training pgd_acc = 0.68750000
+Batch [200/704] training loss = 1.38593459, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.27009749, training pgd_acc = 0.46875000
+Batch [600/704] training loss = 1.28961825, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.26% (3863/5000)
+Adversarial accuracy: 45.00% (2250/5000)
+Epoch [77/100], Passed time:[164.581/12672.770]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.12493372, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.13541245, training pgd_acc = 0.50000000
+Batch [400/704] training loss = 1.25583422, training pgd_acc = 0.62500000
+Batch [600/704] training loss = 1.14904571, training pgd_acc = 0.53125000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.10% (3855/5000)
+Adversarial accuracy: 45.22% (2261/5000)
+Epoch [78/100], Passed time:[164.583/12837.488]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.13876283, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.21368277, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.16779697, training pgd_acc = 0.59375000
+Batch [600/704] training loss = 1.21173167, training pgd_acc = 0.45312500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.32% (3866/5000)
+Adversarial accuracy: 45.04% (2252/5000)
+Epoch [79/100], Passed time:[164.582/13002.004]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.35304344, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.29437017, training pgd_acc = 0.57812500
+Batch [400/704] training loss = 1.18099213, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.24478304, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 76.94% (3847/5000)
+Adversarial accuracy: 45.56% (2278/5000)
+Epoch [80/100], Passed time:[164.583/13166.658]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.26076484, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.34617829, training pgd_acc = 0.45312500
+Batch [400/704] training loss = 1.16314852, training pgd_acc = 0.51562500
+Batch [600/704] training loss = 1.09608221, training pgd_acc = 0.53125000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.00% (3850/5000)
+Adversarial accuracy: 45.70% (2285/5000)
+Epoch [81/100], Passed time:[164.582/13331.129]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.15957987, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.11999345, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.09217656, training pgd_acc = 0.62500000
+Batch [600/704] training loss = 1.03941214, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.24% (3862/5000)
+Adversarial accuracy: 44.60% (2230/5000)
+Epoch [82/100], Passed time:[164.584/13495.897]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.27550924, training pgd_acc = 0.50000000
+Batch [200/704] training loss = 1.16434908, training pgd_acc = 0.56250000
+Batch [400/704] training loss = 1.03333092, training pgd_acc = 0.59375000
+Batch [600/704] training loss = 1.26711380, training pgd_acc = 0.51562500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.36% (3868/5000)
+Adversarial accuracy: 45.36% (2268/5000)
+Epoch [83/100], Passed time:[164.583/13660.403]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.12739921, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.17727387, training pgd_acc = 0.57812500
+Batch [400/704] training loss = 1.25674117, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.27346981, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.62% (3881/5000)
+Adversarial accuracy: 45.30% (2265/5000)
+Epoch [84/100], Passed time:[164.584/13825.069]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19268548, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.08343506, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.17449331, training pgd_acc = 0.59375000
+Batch [600/704] training loss = 1.14809203, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.16% (3858/5000)
+Adversarial accuracy: 45.24% (2262/5000)
+Epoch [85/100], Passed time:[164.585/13989.705]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.11528528, training pgd_acc = 0.56250000
+Batch [200/704] training loss = 1.05410349, training pgd_acc = 0.57812500
+Batch [400/704] training loss = 1.07647848, training pgd_acc = 0.54687500
+Batch [600/704] training loss = 0.93123579, training pgd_acc = 0.67187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.32% (3866/5000)
+Adversarial accuracy: 45.26% (2263/5000)
+Epoch [86/100], Passed time:[164.585/14154.332]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.19399452, training pgd_acc = 0.54687500
+Batch [200/704] training loss = 1.19626856, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.09400892, training pgd_acc = 0.59375000
+Batch [600/704] training loss = 1.21119428, training pgd_acc = 0.59375000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.20% (3860/5000)
+Adversarial accuracy: 45.34% (2267/5000)
+Epoch [87/100], Passed time:[164.584/14318.819]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.13636363, training pgd_acc = 0.51562500
+Batch [200/704] training loss = 1.24593449, training pgd_acc = 0.51562500
+Batch [400/704] training loss = 1.09204042, training pgd_acc = 0.56250000
+Batch [600/704] training loss = 1.06239700, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 78.00% (3900/5000)
+Adversarial accuracy: 45.12% (2256/5000)
+Epoch [88/100], Passed time:[164.584/14483.422]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 0.96568739, training pgd_acc = 0.59375000
+Batch [200/704] training loss = 1.12328732, training pgd_acc = 0.54687500
+Batch [400/704] training loss = 1.40453386, training pgd_acc = 0.39062500
+Batch [600/704] training loss = 1.03255785, training pgd_acc = 0.62500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.42% (3871/5000)
+Adversarial accuracy: 44.98% (2249/5000)
+Epoch [89/100], Passed time:[164.583/14647.929]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.04267335, training pgd_acc = 0.64062500
+Batch [200/704] training loss = 1.18867850, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.16079628, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.08559465, training pgd_acc = 0.62500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 78.06% (3903/5000)
+Adversarial accuracy: 44.78% (2239/5000)
+Epoch [90/100], Passed time:[164.583/14812.480]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.09206653, training pgd_acc = 0.48437500
+Batch [200/704] training loss = 1.29437125, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.16885531, training pgd_acc = 0.60937500
+Batch [600/704] training loss = 1.40734744, training pgd_acc = 0.45312500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.78% (3889/5000)
+Adversarial accuracy: 44.44% (2222/5000)
+Epoch [91/100], Passed time:[164.583/14977.015]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.23004019, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.18408751, training pgd_acc = 0.46875000
+Batch [400/704] training loss = 1.18677378, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.12325037, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.52% (3876/5000)
+Adversarial accuracy: 44.96% (2248/5000)
+Epoch [92/100], Passed time:[164.582/15141.525]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.16727877, training pgd_acc = 0.57812500
+Batch [200/704] training loss = 1.20951021, training pgd_acc = 0.51562500
+Batch [400/704] training loss = 1.15243483, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.08536971, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.08% (3854/5000)
+Adversarial accuracy: 45.38% (2269/5000)
+Epoch [93/100], Passed time:[164.581/15306.074]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.09246719, training pgd_acc = 0.53125000
+Batch [200/704] training loss = 0.99703574, training pgd_acc = 0.64062500
+Batch [400/704] training loss = 1.17496610, training pgd_acc = 0.57812500
+Batch [600/704] training loss = 1.29941320, training pgd_acc = 0.50000000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.38% (3869/5000)
+Adversarial accuracy: 45.36% (2268/5000)
+Epoch [94/100], Passed time:[164.581/15470.587]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.18640268, training pgd_acc = 0.43750000
+Batch [200/704] training loss = 1.20943856, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.16225648, training pgd_acc = 0.50000000
+Batch [600/704] training loss = 1.21242595, training pgd_acc = 0.48437500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.64% (3882/5000)
+Adversarial accuracy: 44.88% (2244/5000)
+Epoch [95/100], Passed time:[164.580/15635.063]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.10282719, training pgd_acc = 0.59375000
+Batch [200/704] training loss = 1.19982147, training pgd_acc = 0.57812500
+Batch [400/704] training loss = 1.10658276, training pgd_acc = 0.53125000
+Batch [600/704] training loss = 1.12362230, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.60% (3880/5000)
+Adversarial accuracy: 44.80% (2240/5000)
+Epoch [96/100], Passed time:[164.580/15799.701]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 0.96484876, training pgd_acc = 0.65625000
+Batch [200/704] training loss = 1.08272290, training pgd_acc = 0.57812500
+Batch [400/704] training loss = 1.16032517, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.10995579, training pgd_acc = 0.57812500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.68% (3884/5000)
+Adversarial accuracy: 44.48% (2224/5000)
+Epoch [97/100], Passed time:[164.579/15964.192]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.09316504, training pgd_acc = 0.62500000
+Batch [200/704] training loss = 1.12872732, training pgd_acc = 0.56250000
+Batch [400/704] training loss = 1.28167355, training pgd_acc = 0.53125000
+Batch [600/704] training loss = 0.98662448, training pgd_acc = 0.54687500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.50% (3875/5000)
+Adversarial accuracy: 45.18% (2259/5000)
+Epoch [98/100], Passed time:[164.582/16129.074]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.25739229, training pgd_acc = 0.57812500
+Batch [200/704] training loss = 1.10633969, training pgd_acc = 0.53125000
+Batch [400/704] training loss = 1.25113750, training pgd_acc = 0.48437500
+Batch [600/704] training loss = 1.25195086, training pgd_acc = 0.42187500
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.32% (3866/5000)
+Adversarial accuracy: 44.68% (2234/5000)
+Epoch [99/100], Passed time:[164.584/16293.767]
+learning rate: 0.0010000000000000002
+Train with PGD
+Batch [0/704] training loss = 1.17689312, training pgd_acc = 0.45312500
+Batch [200/704] training loss = 1.18298745, training pgd_acc = 0.48437500
+Batch [400/704] training loss = 1.37617993, training pgd_acc = 0.45312500
+Batch [600/704] training loss = 1.03172457, training pgd_acc = 0.62500000
+Valid Test with PGD
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.60% (3880/5000)
+Adversarial accuracy: 45.20% (2260/5000)
+Training done, model saved in ./trained_models_new/cifar/vgg16/fgsm/pruned1_epoch90_r80/init_pure/init_enhance_madry_m0.01_warmup0.1_nn.pth
+Test on test set:
+Evaluating with pgd untargeted attack,eps=0.031373, iters=10, attack_steps=0.007843
+Clean accuracy: 77.85% (7785/10000)
+Adversarial accuracy: 44.72% (4472/10000)
